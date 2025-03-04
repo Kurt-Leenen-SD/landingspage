@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav role="navigation">
+            <div id="menuToggle">
+              <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+              <input type="checkbox" id="menuCheckbox" />
+              
+              <!--
+              Some spans to act as a hamburger.
+              
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+              <ul id="menu">
+                <!-- 
+                We can use a label here to close upon click (when doing same page navigation), this
+                does require a slight bit of JS.
+                -->
+                <li>
+                  <a href="#">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+                  </a>
+                </li>
+                <li>
+                  <a href="#about">
+                    <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
+                  </a>
+                </li>
+                
+                <!-- These just close the menu -->
+                <li><label for="menuCheckbox"><a>Info</a></label></li>
+                <li><label for="menuCheckbox"><a>Contact</a></label></li>
+                
+                <!-- Or just use regular URLs -->
+                <li>
+                  <a href="https://39231.hosts2.ma-cloud.nl/" target="_blank">Show me more</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        <article id="base" class="base">
+            <div>
+                <img src="plaatjes/head.webp" alt="A bustling city" class="head_image">
+            </div>
+            
+            <h1>Tokyo</h1>
+        </article>
+        <article class="collections">
+            <h2>Collections</h2>
+            <ul class="Collection">
+                <li class="Col-Item">1</li>
+                <li class="Col-Item">2</li>
+                <li class="Col-Item">3</li>
+                <li class="Col-Item">4</li>
+                <li class="Col-Item">5</li>
+                <li class="Col-Item">6</li>
+            </ul>
+        </article>
+        <section class="info">
+            <h2 class="middle">More Info</h2>
+            <div class="block">
+                <div class="left">
+                    <h3>hoi</h3>
+                    <p class="informatie">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis massa eros, commodo in auctor eget, condimentum et velit. Curabitur sit amet rhoncus augue. Sed sed turpis at tortor hendrerit feugiat eget et enim. Curabitur velit neque, pretium eu lacinia et, euismod et diam. Nunc eget ullamcorper lectus. Ut feugiat arcu id leo elementum, eu tincidunt ex imperdiet. Etiam at volutpat enim. Donec porta velit a scelerisque congue. Vestibulum eu sem mauris. Morbi quis lacinia purus, vitae dictum mauris. Nunc elementum eget dolor at finibus. Nullam at iaculis est.</p>
+                </div>
+                <div class="right">
+                    <h3>hoi</h3>
+                    <p class="informatie">nog veel meer info</p>
+                </div>
+                
+            </div>
+        </section>
+        <section>
+          <div>
+            <h2>wilt U graag gehacked worden? vul hier uw google informatie in (niet echt doen)</h2>
+            <form>
+              <div class="formDiv">
+                <label for="">Your Name:</label>
+                <input type="text" placeholder="John Pork">
+              </div>
+              <div class="formDiv">
+                <label for="">Your email:</label>
+                <input type="email" placeholder="john.pork@example.com">
+              </div>
+              <div class="formDiv">
+                <label for="">Your Password:</label>
+                <input type="password" placeholder="JohnPork_123!">
+              </div>
+              <div class="formDiv">
+                <label for="">Your Comment:</label>
+                <textarea name="" id="" placeholder="State your comment here!"></textarea>
+              </div>
+              <div class="formDiv">
+                <button type="button" class="submitbutton">Submit answer</button>
+              </div>
+            </form>
+          </div>
+        </section>
+    </body>
+</html>
